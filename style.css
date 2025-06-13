@@ -117,7 +117,7 @@
   color: #e0f7ff;
   text-shadow: 1px 1px 4px rgba(0, 255, 255, 0.2);
   transition: transform 0.5s ease;
-  line-height: 1.8;
+  line-height: 1;
 }
 
 .about-text:hover {
