@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="ar" dir="ltr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ahmed Salama - Data Scientist and Machine Learning Enthusiast Portfolio">
+  <title>Ahmed Salama | Data Scientist Portfolio</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --primary-color: #00ffff;
+      --secondary-color: #081421;
+      --background-color: #0b1a2d;
+      --card-bg: #132238;
+      --text-color: #e0e0e0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+      background-color: var(--background-color);
+      background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+
+    header {
+      background: var(--secondary-color);
+      color: #fff;
+      padding: 150px 0 100px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #particles-js {
+      background: transparent;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+
+    .container.position-relative {
+      z-index: 1;
+    }
+
+    section {
+      padding: 80px 0;
+    }
+
+    .navbar {
+      background: rgba(0, 12, 26, 0.95);
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+    }
+
+    .navbar.scrolled {
+      background: rgba(0, 12, 26, 0.98);
+      padding: 10px 0;
+    }
+
+    .navbar a {
+      color: white !important;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .navbar a:hover {
+      color: var(--primary-color) !important;
+    }
+
+    .navbar-brand {
+      font-weight: 600;
+      font-size: 1.2rem;
+    }
+
+    .service-box {
+      padding: 40px 20px;
+      border-radius: 10px;
+      transition: 0.3s;
+      background-color: var(--card-bg);
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .service-box:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 255, 255, 0.15);
+    }
+
+    .experience-box {
+      padding: 30px;
+      border-radius: 10px;
+      transition: 0.3s;
+      background-color: var(--card-bg);
+      height: 100%;
+      cursor: pointer;
+      margin-bottom: 20px;
+    }
+
+    .experience-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 255, 255, 0.1);
+    }
+
+    .img-profile {
+      max-width: 220px;
+      border-radius: 50%;
+      margin: 0 auto 30px;
+      display: block;
+      border: 5px solid #ffffff;
+      box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .img-profile:hover {
+      transform: scale(1.05);
+      box-shadow: 0 20px 30px rgba(0, 191, 255, 0.5);
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      border: none;
+      color: #fff;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      height: 100%;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px 8px 0 0;
+    }
+
+    .card-body {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .card-title {
+      font-weight: 600;
+      font-size: 1.3rem;
+      margin-bottom: 15px;
+      color: var(--primary-color);
+    }
+
+    .card-text {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #ccc;
+      flex-grow: 1;
+    }
+
+    .social-icons a {
+      color: var(--primary-color);
+      font-size: 1.8rem;
+      margin: 0 15px;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    .social-icons a:hover {
+      color: #fff;
+      transform: translateY(-5px);
+    }
+
+    header h1 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      color: var(--primary-color);
+      font-size: 3.5rem;
+      margin-bottom: 15px;
+    }
+
+    header h4 {
+      font-weight: 400;
+      font-size: 1.5rem;
+      margin-bottom: 30px;
+    }
+
+    .about-text {
+      text-align: center;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.4rem;
+      color: #e0f7ff;
+      text-shadow: 1px 1px 4px rgba(0, 255, 255, 0.2);
+      transition: transform 0.5s ease;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .service-box h5 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      color: var(--primary-color);
+      font-size: 1.5rem;
+      margin-top: 15px;
+    }
+
+    .service-icon {
+      font-size: 2.5rem;
+      color: var(--primary-color);
+      margin-bottom: 15px;
+    }
+
+    .cv-btn {
+      font-family: 'Poppins', sans-serif;
+      border: 2px solid var(--primary-color);
+      color: var(--primary-color);
+      background-color: transparent;
+      padding: 12px 28px;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .cv-btn:hover {
+      background-color: var(--primary-color);
+      color: var(--secondary-color);
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+      transform: scale(1.05);
+    }
+
+    .section-title {
+      font-weight: 700;
+      color: var(--primary-color);
+      margin-bottom: 50px;
+      position: relative;
+      display: inline-block;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      width: 60%;
+      height: 3px;
+      background: var(--primary-color);
+      bottom: -10px;
+      left: 20%;
+      border-radius: 2px;
+    }
+
+    .experience-section {
+      background-color: rgba(19, 34, 56, 0.5);
+    }
+
+    footer {
+      background: var(--secondary-color);
+      color: white;
+      padding: 30px 0;
+      text-align: center;
+    }
+
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: var(--primary-color);
+      color: var(--secondary-color);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      z-index: 1000;
+    }
+
+    .back-to-top.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .experience-icon {
+      font-size: 2rem;
+      color: var(--primary-color);
+      margin-bottom: 15px;
+    }
+
+    /* توسيط المشاريع في قسم Portfolio */
+    .portfolio-center .row {
+      justify-content: center;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      header {
+        padding: 120px 0 80px;
+      }
+      
+      header h1 {
+        font-size: 2.5rem;
+      }
+      
+      header h4 {
+        font-size: 1.2rem;
+      }
+      
+      .about-text {
+        font-size: 1.1rem;
+      }
+      
+      .img-profile {
+        max-width: 180px;
+      }
+      
+      .service-box, .experience-box {
+        margin-bottom: 20px;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Ahmed Salama | Data Scientist</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"><i class="fas fa-bars" style="color: #fff;"></i></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header id="home">
+    <div id="particles-js"></div>
+    <div class="container position-relative">
+      <img src="1739093179182.jpeg" alt="Ahmed's Photo" class="img-profile" data-aos="zoom-in" />
+      <h1 data-aos="fade-up">Hi, I'm Ahmed Salama</h1>
+      <h4 data-aos="fade-up" data-aos-delay="100">Data Scientist & Machine Learning Enthusiast</h4>
+      
+      <!-- CV Button -->
+      <div class="mt-4" data-aos="fade-up" data-aos-delay="200">
+        <a href="https://drive.google.com/file/d/1MjEt6z4TbGoS-YvPzI4DKs0u88p1h7v2/view?usp=sharing" target="_blank" class="btn cv-btn">
+          <i class="fas fa-file-download me-2"></i>My CV
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="container">
+      <h2 class="text-center section-title" data-aos="fade-up">About Me</h2>
+      <p class="about-text" data-aos="fade-up" data-aos-delay="100">
+        I'm a passionate Data Science student with a strong focus on Machine Learning and problem-solving. 
+        I enjoy learning new technologies and turning complex data into actionable insights. 
+        My goal is to leverage data-driven approaches to solve real-world challenges.
+      </p>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="experience-section">
+    <div class="container">
+      <h2 class="text-center section-title" data-aos="fade-up">Experience</h2>
+      <div class="row">
+        <!-- Experience 1 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up">
+          <div class="experience-box text-center">
+            <div class="experience-icon">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <h5>Data Analyst Intern</h5>
+            <p>Deloitte
+-Analyze and extract patterns from factory machines' data, and examine employees' salary data to determine if there
+is a gender bias based on specific calculations and Visualization by Tableau.</p>
+            <small>Sep 2025 - Sep 2025</small>
+          </div>
+        </div>
+
+        <!-- Experience 2 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="experience-box text-center">
+            <div class="experience-icon">
+              <i class="fas fa-brain"></i>
+            </div>
+            <h5>Machine Learning Intern</h5>
+            <p>NTI (National Telecommunication Institute)
+- Focused on machine learning fundamentals and deployment basics. Practiced end-to-end ML
+workflow from data collection to model testing.</p>
+            <small>Aug 2025 - Sep 2025</small>
+          </div>
+        </div>
+
+        <!-- Experience 3 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="experience-box text-center">
+            <div class="experience-icon">
+              <i class="fa-solid fa-atom"></i>
+            </div>
+            <h5>Data Science Intern</h5>
+            <p>Code Alpha
+- Worked on multiple projects, including Unemployment in India analysis, Car Price Prediction
+- Titanic Survival Prediction, House Price Prediction, and Stock Price Forecasting.</p>
+            <small>Jun 2025 - Jul 2025</small>
+          </div>
+        </div>
+
+        <!-- Experience 4 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="experience-box text-center">
+            <div class="experience-icon">
+              <i class="fa-solid fa-building-columns"></i>
+            </div>
+            <h5>CIB Egypt Intern</h5>
+            <p>CIB (Commercial International Bank) Egypt
+-Applied data analysis and AI concepts to financial/business datasets.
+-Gained exposure to real corporate workflows and teamwork in a professional environment.</p>
+            <small>Jul 2025 - Aug 2025</small>
+          </div>
+        </div>
+
+        <!-- Experience 5 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+          <div class="experience-box text-center">
+            <div class="experience-icon">
+              <i class="fa-solid fa-chart-simple"></i>
+            </div>
+            <h5>Data Analyst Intern</h5>
+            <p>Mazen Analytics Lab
+-Conducted data cleaning, preprocessing, and visualization tasks using Excel, Power BI, Python, Tableau.
+- Learned how to extract insights and using SQL for Data Analysis.</p>
+            <small>Jun 2025 - Present</small>
+          </div>
+        </div>
+
+        <!-- Experience 6 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
+          <div class="experience-box text-center">
+            <div class="experience-icon">
+              <i class="fas fa-brain"></i>
+            </div>
+            <h5>Machine Learning Intern</h5>
+            <p>Uneeq Interns-Built and evaluated ML models and Gained experience in feature engineering, and performance metrics  like Customer Churn Analysis, Recommender Systems, Sentiment Analysis.</p>
+            <small>Aug 2025 - Sep 2025</small>
+          </div>
+        </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services">
+    <div class="container">
+      <h2 class="text-center section-title" data-aos="fade-up">Services</h2>
+      <div class="row">
+        <!-- Data Science -->
+        <div class="col-md-4 mb-4" data-aos="fade-up">
+          <div class="service-box text-center">
+            <div class="service-icon">
+              <i class="fa-solid fa-atom"></i>
+            </div>
+            <h5>Data Science</h5>
+            <p>End-to-end data science solutions including data collection, cleaning, analysis, and modeling.</p>
+          </div>
+        </div>
+
+        <!-- Data Analysis -->
+        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-box text-center">
+            <div class="service-icon">
+              <i class="fa-solid fa-chart-simple"></i>
+            </div>
+            <h5>Data Analysis</h5>
+            <p>Extracting meaningful insights from complex datasets to drive informed decision-making.</p>
+          </div>
+        </div>
+
+        <!-- Machine Learning -->
+        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-box text-center">
+            <div class="service-icon">
+              <i class="fas fa-brain"></i>
+            </div>
+            <h5>Machine Learning</h5>
+            <p>Developing predictive models and algorithms to solve complex business problems.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio">
+    <div class="container portfolio-center">
+      <h2 class="text-center section-title" data-aos="fade-up">Portfolio</h2>
+      <div class="row">
+        <!-- Project 1 -->
+        <div class="col-md-6 col-lg-4 mb-4" data-aos="zoom-in">
+          <div class="card h-100" onclick="window.open('https://github.com/ahmedsalama00/Titanic-Predection', '_blank')">
+            <img src="dataset-card.jpg" class="card-img-top" alt="Titanic Survival Prediction">
+            <div class="card-body">
+              <h3 class="card-title">Titanic Survival Prediction</h3>
+              <p class="card-text">Created a classification model to predict passenger survival using demographic and onboard data. Applied data cleaning, visualization, and ML techniques.</p>
+              <div class="mt-auto pt-3">
+                <span class="badge bg-primary">Python</span>
+                <span class="badge bg-info">Scikit-learn</span>
+                <span class="badge bg-secondary">Pandas</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="col-md-6 col-lg-4 mb-4" data-aos="zoom-in" data-aos-delay="100">
+          <div class="card h-100" onclick="window.open('https://github.com/ahmedsalama00/Adidas', '_blank')">
+            <img src="Adidas.jpg" class="card-img-top" alt="Car Accident Severity Classification">
+            <div class="card-body">
+              <h3 class="card-title">Adidas Sales Dashboard</h3>
+              <p class="card-text">Built a dashboard to analyze sales trends, revenue, and regional performance.</p>
+              <div class="mt-auto pt-3">
+                <span class="badge bg-primary">Power BI</span>
+                <span class="badge bg-success">Excel</span>
+                <span class="badge bg-info">Sales Analytics</span>
+                <span class="badge bg-danger">Business Intelligence</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="col-md-6 col-lg-4 mb-4" data-aos="zoom-in" data-aos-delay="200">
+          <div class="card h-100" onclick="window.open('https://github.com/ahmedsalama00/Stock-Price-Predection', '_blank')">
+            <img src="pexels-aedrian-10653886.jpg" class="card-img-top" alt="Stock Price Prediction">
+            <div class="card-body">
+              <h3 class="card-title">Stock Price Prediction</h3>
+              <p class="card-text">Developed a model to forecast stock prices using regression and historical trends. Included data preprocessing and feature engineering.</p>
+              <div class="mt-auto pt-3">
+                <span class="badge bg-primary">Python</span>
+                <span class="badge bg-warning">Time Series</span>
+                <span class="badge bg-danger">TensorFlow</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="col-md-6 col-lg-4 mb-4" data-aos="zoom-in" data-aos-delay="300">
+          <div class="card h-100" onclick="window.open('https://github.com/ahmedsalama00/House-Price-Forecasting', '_blank')">
+            <img src="d.jpg" class="card-img-top" alt="House Price Forecasting">
+            <div class="card-body">
+              <h3 class="card-title">House Price Forecasting</h3>
+              <p class="card-text">Built a regression-based model to estimate house prices using features like location, area, and room count. Ideal for real estate insights.</p>
+              <div class="mt-auto pt-3">
+                <span class="badge bg-primary">Python</span>
+                <span class="badge bg-success">Regression</span>
+                <span class="badge bg-info">Feature Engineering</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="col-md-6 col-lg-4 mb-4" data-aos="zoom-in" data-aos-delay="400">
+          <div class="card h-100" onclick="window.open('https://github.com/ahmedsalama00/Customer-Churn-Predection', '_blank')">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="Customer Segmentation">
+            <div class="card-body">
+              <h3 class="card-title">Customer Churn Prediction</h3>
+              <p class="card-text">Built a machine learning model to predict customer churn using classification algorithms.</p>
+              <div class="mt-auto pt-3">
+                <span class="badge bg-primary">Python</span>
+                <span class="badge bg-warning">Classification</span>
+                <span class="badge bg-info">Pandas</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="col-md-6 col-lg-4 mb-4" data-aos="zoom-in" data-aos-delay="500">
+          <div class="card h-100" onclick="window.open('https://github.com/ahmedsalama00/Sentiment-Analysis', '_blank')">
+            <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="Sentiment Analysis">
+            <div class="card-body">
+              <h3 class="card-title">Sentiment Analysis</h3>
+              <p class="card-text">Developed NLP models to analyze sentiment in customer reviews, helping businesses understand customer satisfaction.</p>
+              <div class="mt-auto pt-3">
+                <span class="badge bg-primary">Python</span>
+                <span class="badge bg-success">NLP</span>
+                <span class="badge bg-info">Text Analysis</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 7 -->
+        <div class="col-md-6 col-lg-4 mb-4" data-aos="zoom-in" data-aos-delay="500">
+          <div class="card h-100" onclick="window.open('https://github.com/ahmedsalama00/Salla', '_blank')">
+            <img src="Salla.webp" class="card-img-top" alt="Sentiment Analysis">
+            <div class="card-body">
+              <h3 class="card-title">Salla Data Analysis</h3>
+              <p class="card-text">Analyzed customer support data and visualized KPIs to track efficiency.</p>
+              <div class="mt-auto pt-3">
+                <span class="badge bg-warning">Power BI</span>
+                <span class="badge bg-success">KPI Tracking</span>
+                <span class="badge bg-info">Data Analysis</span>
+                <span class="badge bg-danger">SQL</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 8 -->
+        <div class="col-md-6 col-lg-4 mb-4" data-aos="zoom-in" data-aos-delay="500">
+          <div class="card h-100" onclick="window.open('https://github.com/ahmedsalama00/Movie-Recommender-System', '_blank')">
+            <img src="Movie.jpg" class="card-img-top" alt="Sentiment Analysis">
+            <div class="card-body">
+              <h3 class="card-title">Movie Recommender System</h3>
+              <p class="card-text">Designed a recommendation engine using collaborative & content-based filtering techniques.</p>
+              <div class="mt-auto pt-3">
+                <span class="badge bg-primary">Python</span>
+                <span class="badge bg-success">Scikit-learn</span>
+                <span class="badge bg-info">Pandas</span>
+                <span class="badge bg-danger">Recommendation Algorithms</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 9 -->
+        <div class="col-md-6 col-lg-4 mb-4" data-aos="zoom-in" data-aos-delay="500">
+          <div class="card h-100" onclick="window.open('https://github.com/ahmedsalama00/MISUO', '_blank')">
+            <img src="Misuo.png" class="card-img-top" alt="Sentiment Analysis">
+            <div class="card-body">
+              <h3 class="card-title">MISUO Furniture </h3>
+              <p class="card-text">Created an interactive reporting dashboard for sales and performance insights.</p>
+              <div class="mt-auto pt-3">
+                <span class="badge bg-warning">Power BI</span>
+                <span class="badge bg-success">Data Visualization</span>
+                <span class="badge bg-info">DAX</span>
+                <span class="badge bg-danger">Data Cleaning</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="text-center section-title" data-aos="fade-up">Connect With Me</h2>
+      <div class="text-center social-icons" data-aos="fade-up" data-aos-delay="100">
+        <a href="https://www.linkedin.com/in/ahmedsalamaa00/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/ahmedsalama00" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.instagram.com/a_salama00/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/ahmed.salama.619657" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="mailto:ahmedsalamaa2007@gmail.com"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Ahmed Salama. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <div class="back-to-top">
+    <i class="fas fa-chevron-up"></i>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true
+    });
+
+    // Particles.js configuration
+    particlesJS("particles-js", {
+      "particles": {
+        "number": { "value": 80 },
+        "color": { "value": "#00bfff" },
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.3 },
+        "size": { "value": 3 },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#00bfff",
+          "opacity": 0.3,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 2
+        }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": { "enable": true, "mode": "grab" }
+        },
+        "modes": {
+          "grab": { "distance": 140, "line_linked": { "opacity": 0.5 } }
+        }
+      },
+      "retina_detect": true
+    });
+
+    // Navbar scroll effect
+    window.addEventListener('scroll', function() {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    // Back to top button
+    const backToTopButton = document.querySelector('.back-to-top');
+    
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 300) {
+        backToTopButton.classList.add('active');
+      } else {
+        backToTopButton.classList.remove('active');
+      }
+    });
+    
+    backToTopButton.addEventListener('click', function() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 70,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

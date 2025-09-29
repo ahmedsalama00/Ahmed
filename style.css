@@ -1,0 +1,205 @@
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      scroll-behavior: smooth;
+      background-color: transparent;
+      color: #e0e0e0;
+    }
+
+    header {
+      background: rgba(8, 20, 33, 0.8);
+      color: #fff;
+      padding: 100px 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    #particles-js {
+      background: transparent;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    .container.position-relative {
+      z-index: 1;
+    }
+
+    section {
+      padding: 80px 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .navbar {
+      background: rgba(0, 12, 26, 0.9);
+      z-index: 1000;
+      position: relative;
+    }
+
+    .navbar a {
+      color: white !important;
+    }
+
+    .service-box {
+      padding: 30px;
+      border: 1px solid #334;
+      border-radius: 10px;
+      transition: 0.3s;
+      background-color: rgba(19, 34, 56, 0.8);
+    }
+
+    .service-box:hover {
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+      transform: translateY(-5px);
+    }
+
+    footer {
+      background: #081421;
+      color: white;
+      padding: 40px 0;
+      text-align: center;
+    }
+
+    .img-profile {
+      max-width: 200px;
+      border-radius: 50%;
+      margin: 30px auto;
+      display: block;
+      border: 5px solid #1e3a8a;
+      box-shadow: 0 10px 20px rgba(30, 58, 138, 0.3);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .img-profile:hover {
+      transform: scale(1.05);
+      box-shadow: 0 20px 30px rgba(30, 58, 138, 0.6);
+    }
+
+    .card {
+      background-color: rgba(19, 34, 56, 0.8);
+      border: none;
+      color: #fff;
+    }
+
+    .card-img-top {
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .card-title {
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    .card-text {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      color: #ccc;
+    }
+
+    .social-icons a {
+      color: #00bfff;
+      font-size: 1.8rem;
+      margin: 0 15px;
+    }
+    header h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 1000;
+  color: #00ffff;
+  font-size: 3rem;
+}
+.about-text {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  color: #e0f7ff;
+  text-shadow: 1px 1px 4px rgba(0, 255, 255, 0.2);
+  transition: transform 0.5s ease;
+  line-height: 1;
+}
+
+.about-text:hover {
+  transform: scale(1.02);
+  text-shadow: 1px 1px 10px rgba(0, 255, 255, 0.5);
+}
+/* خط الخدمات وتناسق */
+.service-box h5 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: #00ffff;
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+/* ظل وتأثير */
+.custom-shadow {
+  box-shadow: 0 10px 25px rgba(0, 255, 255, 0.08);
+  border-radius: 15px;
+  padding: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: rgba(19, 34, 56, 0.8);
+}
+
+.custom-shadow:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0, 255, 255, 0.25);
+}
+.cv-btn {
+  font-family: 'Poppins', sans-serif;
+  border: 2px solid #00ffff;
+  color: #00ffff;
+  background-color: transparent;
+  padding: 12px 28px;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+}
+
+.cv-btn:hover {
+  background-color: #00ffff;
+  color: #081421;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+  transform: scale(1.05);
+}
+
+/* Ensure CV button section has proper z-index */
+.text-center.my-4 {
+  position: relative;
+  z-index: 1;
+}
+
+/* Experience section styling */
+.experience-box {
+  padding: 30px;
+  border: 1px solid #334;
+  border-radius: 10px;
+  transition: 0.3s;
+  background-color: rgba(19, 34, 56, 0.8);
+  height: 100%;
+}
+
+.experience-box:hover {
+  box-shadow: 0 0 15px rgba(30, 58, 138, 0.4);
+  transform: translateY(-5px);
+}
+
+.experience-box h5 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: #1e3a8a;
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+.experience-box p {
+  color: #ccc;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
